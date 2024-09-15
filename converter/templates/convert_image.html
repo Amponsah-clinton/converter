@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Convert Image Format</h2>
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.image.label_tag }}<br>
+            {{ form.image }}
+        </div>
+        <div class="mb-3">
+            {{ form.format.label_tag }}<br>
+            {{ form.format }}
+        </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+{% endblock %}

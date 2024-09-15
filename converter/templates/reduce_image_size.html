@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Reduce Image Size</h2>
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.image.label_tag }}<br>
+            {{ form.image }}
+        </div>
+        <div class="mb-3">
+            {{ form.quality.label_tag }}<br>
+            {{ form.quality }}
+        </div>
+        <button type="submit" class="btn btn-success">Reduce Size</button>
+    </form>
+{% endblock %}

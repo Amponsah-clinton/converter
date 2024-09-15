@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="text-center">
+        <h1>Welcome to Image Processing App</h1>
+        <p>Select one of the functionalities below:</p>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{% url 'convert_image' %}" class="btn btn-primary btn-lg">Convert Image Format</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'reduce_image_size' %}" class="btn btn-success btn-lg">Reduce Image File Size</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'resize_image' %}" class="btn btn-warning btn-lg">Resize Image (L×B)</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
